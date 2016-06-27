@@ -3,31 +3,20 @@
 
 # Oh my ZSH configuration
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="ys"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+ZSH_THEME="solus"
+DISABLE_UNTRACKED_FILES_DIRTY="false"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git brew bundler osx rails ruby rvm)
+plugins=(git sudo)
 source $ZSH/oh-my-zsh.sh
 
 # Home settings
-export NVM_HOME=$HOME/.nvm
-export RVM_HOME=$HOME/.rvm
-export ANDROID_HOME=$HOME/Library/Android/sdk
-
-# Racer
-export RUST_SRC_PATH=/usr/local/src/rustc/src
+export JAVA_HOME="/opt/java/jdk/jre"
+export JDK_HOME="/opt/java/jdk"
 
 # Set up PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-if [ -d $HOME/.bin ]; then export PATH="$HOME/.bin:$PATH"; fi
-if [ -d $HOME/.cargo/bin ]; then export PATH="$HOME/.cargo/bin:$PATH"; fi
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PATH="$JAVA_HOME/bin:$JDK_HOME/bin:$PATH"
 
-export LANG=es_ES.UTF-8
+export LANG=en_US.UTF-8
 export EDITOR=vim
 
-# Some applications like to set up their autostart scripts.
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-[ -f $NVM_HOME/nvm.sh ] && source $NVM_HOME/nvm.sh
-[ -f $RVM_HOME ] && source $RVM_HOME/scripts/rvm
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

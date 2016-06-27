@@ -1,12 +1,16 @@
 [user]
-	email = danirod@outlook.com
-	name = Dani Rodríguez
+	email = edalvz@gmail.com
+	name = Edgardo Alz
 
 [alias]
-        # 99.9% times I review the log I use it this way. It makes sense.
-        lod = log --oneline --decorate --color
-        co = checkout
-        ci = commit
+    # 99.9% times I review the log I use it this way. It makes sense.
+    lod = log --oneline --decorate --color --graph
+    unstage = reset HEAD --
+    last = log -1 HEAD
+
+[core]
+    editor = vim
+    autocrlf = input
 
 # The following code is not mine.
 # Taken from http://www.kunday.com/post/29594688306/git-config-hacks
