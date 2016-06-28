@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="solus"
 DISABLE_UNTRACKED_FILES_DIRTY="false"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git sudo)
+plugins=(git sudo command-not-found node npm)
 source $ZSH/oh-my-zsh.sh
 
 # Home settings
