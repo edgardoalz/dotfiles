@@ -1,6 +1,6 @@
 [user]
-	email = edalvz@gmail.com
-	name = Edgardo Alz
+	email = ealvarez@digiteckno.com 
+	name = Edgardo Alvarez
 
 [alias]
     # 99.9% times I review the log I use it this way. It makes sense.
@@ -31,6 +31,6 @@
     new = green bold
 
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+    added = green 
+    changed = yellow
+    untracked = red
