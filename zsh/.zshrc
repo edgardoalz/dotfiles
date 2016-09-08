@@ -11,8 +11,9 @@ plugins=(git sudo command-not-found node npm tmux systemd ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 # Home settings
-export JAVA_HOME="/opt/java/jdk/jre"
-export JDK_HOME="/opt/java/jdk"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+export JDK_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export ANDROID_HOME="/opt/android/sdk"
 
 # Set up PATH
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
