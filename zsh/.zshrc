@@ -3,11 +3,11 @@
 
 # Oh my ZSH configuration
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="solus"
+ZSH_THEME="gianu"
 DISABLE_UNTRACKED_FILES_DIRTY="false"
 HIST_STAMPS="yyyy-mm-dd"
 export ZSH_TMUX_AUTOSTART=true
-plugins=(git sudo command-not-found node npm tmux systemd ssh-agent)
+plugins=(git sudo command-not-found node npm tmux)
 source $ZSH/oh-my-zsh.sh
 
 # Home settings
