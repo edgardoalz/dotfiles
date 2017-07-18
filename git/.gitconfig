@@ -7,7 +7,20 @@
     lod = log --oneline --decorate --color --graph
     unstage = reset HEAD --
     last = log -1 HEAD
+    topics = "!f() { git branch --sort=committerdate -r | sed -e 's|remotes/||g' -e 's|origin/||g' | grep -E \"[a-z][a-z]?[a-z]?/.*\" | cut -c3- | uniq | grep -v HEAD ; }; f"
+    #Bsically `log --oneline --decorate --graph` with different colors and some additional info (author and date)
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset) %C(normal)%s%C(reset) %C(dim white)%an%C(reset) %C(dim blue)(%ar)%C(reset) %C(auto)%d%C(reset)'
 
+    # lg (see above) with --first-parent
+    lgp = log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset) %C(normal)%s%C(reset) %C(dim white)%an%C(reset) %C(dim blue)(%ar)%C(reset) %C(auto)%d%C(reset)' --first-parent
+            
+    #branches = "!f() { for line in $(git branch); do \
+    #    echo $line;\
+    #    if [ -n $(git config branch.$line.description) ]; then\
+    #        echo $line\t\t$(git config branch.$line.description);\
+    #    fi\
+    #done; }; f"
+    
 [core]
     editor = vim
     autocrlf = input

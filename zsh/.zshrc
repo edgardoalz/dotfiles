@@ -26,5 +26,15 @@ export EDITOR=vim
 
 # Alias
 alias open=xdg-open
+alias git-branch='git branch | 
+    while read -r line; do 
+        description=$(git config branch.${line/\* /}.description)
+        if [ -n "$description" ]; then
+            echo "\033[33m[$line] \033[0m$description"
+        else
+            echo "\033[33m[$line] \033[0mNo description" 
+        fi
+    done;'
+    #done; | echo -ne | column -t' 
 # Some commands
 clear

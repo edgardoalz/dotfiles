@@ -53,9 +53,9 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 set number
-"set cursorline
-"set cursorcolumn
-"set colorcolumn=80
+set cursorline
+set cursorcolumn
+set colorcolumn=80
 set autoindent
 set expandtab
 set shiftwidth=4
