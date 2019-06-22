@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 DISABLE_UNTRACKED_FILES_DIRTY="false"
 HIST_STAMPS="yyyy-mm-dd"
 export ZSH_TMUX_AUTOSTART=false
-plugins=(git sudo command-not-found node npm systemd ssh-agent)
+plugins=(kubectl git sudo command-not-found node npm systemd ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 # Home settings
@@ -24,6 +24,10 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export PATH="$JAVA_HOME/bin:$JDK_HOME/bin:$ANDROID_HOME/bin:$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$NPM_PATH/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+export GO111MODULE="on"
+export PATH="$HOME/.deno/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 
 export LANG=en_US.UTF-8
 export EDITOR=vim
