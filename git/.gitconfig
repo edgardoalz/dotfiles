@@ -6,6 +6,7 @@
 [alias]
     # 99.9% times I review the log I use it this way. It makes sense.
     lod = log --oneline --decorate --color --graph
+    prune = "git branch --merged | xargs git branch -d"
     unstage = reset HEAD --
     last = log -1 HEAD
     topics = "!f() { git branch --sort=committerdate -r | sed -e 's|remotes/||g' -e 's|origin/||g' | grep -E \"[a-z][a-z]?[a-z]?/.*\" | cut -c3- | uniq | grep -v HEAD ; }; f"
